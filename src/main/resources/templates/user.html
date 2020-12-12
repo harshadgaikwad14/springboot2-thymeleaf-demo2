@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>User</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <h1>This is a user page!</h1>
+    <p><a href="/" th:href="@{/}">Back to home page</a></p>
+    <p><a href="/manager" th:href="@{/manager}">Back to manager page</a></p>
+</div>
+</body>
+</html>
