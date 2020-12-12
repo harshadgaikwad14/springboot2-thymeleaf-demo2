@@ -14,10 +14,14 @@ public class User implements Serializable {
 	private Long id;
 
 	private String username;
+	
+	private Long mobileNo;
 
 	private String password;
 
 	private String passwordConfirm;
+	
+	private String userType;
 
 	private Set<Role> roles = new HashSet<>();
 
@@ -60,12 +64,34 @@ public class User implements Serializable {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+	
+	
+
+	public Long getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(Long mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	
+	
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", passwordConfirm="
-				+ passwordConfirm + ", roles=" + roles + "]";
+		return "User [id=" + id + ", username=" + username + ", mobileNo=" + mobileNo + ", password=" + password
+				+ ", passwordConfirm=" + passwordConfirm + ", userType=" + userType + ", roles=" + roles + "]";
 	}
+
+	
 
 	
 	
